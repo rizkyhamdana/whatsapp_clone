@@ -4,15 +4,6 @@ import 'package:flutter/services.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -36,18 +27,109 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.only(
             top: MediaQuery.of(context).padding.top,
             bottom: MediaQuery.of(context).padding.bottom),
-        // decoration: const BoxDecoration(
-        //   image: DecorationImage(
-        //     image: AssetImage('assets/images/img_bg.png'),
-        //   ),
-        // ),
         margin: EdgeInsets.zero,
         child: Column(
-          children: <Widget>[
+          children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 44,
-              color: const Color(0xFF171717),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              decoration: const BoxDecoration(
+                  color: Color(0xFF171717),
+                  border: Border(
+                      bottom: BorderSide(color: Colors.white, width: 0.2))),
+              alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: IconButton(
+                          padding: EdgeInsets.zero,
+                          icon: const Icon(Icons.arrow_back_ios),
+                          color: const Color(0xFF007AFF),
+                          onPressed: () {},
+                        ),
+                      ),
+                      const Text(
+                        '12',
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFF007AFF),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 24,
+                      ),
+                      Container(
+                        width: 36,
+                        height: 36,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(100)),
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/ic_mylogo.jpeg'),
+                              fit: BoxFit.fitWidth),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Rizky Hamdana',
+                            style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            'typing...',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xFF898989),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: IconButton(
+                          padding: EdgeInsets.zero,
+                          icon: const ImageIcon(
+                              AssetImage('assets/images/ic_vidcall.png')),
+                          color: const Color(0xFF007AFF),
+                          onPressed: () {},
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: IconButton(
+                          padding: EdgeInsets.zero,
+                          icon: const ImageIcon(
+                              AssetImage('assets/images/ic_audiocall.png')),
+                          color: const Color(0xFF007AFF),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
             Expanded(
               child: Container(
@@ -57,118 +139,110 @@ class _HomePageState extends State<HomePage> {
                       image: AssetImage('assets/images/img_bg.png'),
                       fit: BoxFit.fitWidth),
                 ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 44,
-                        color: const Color(0xFF171717),
-                      ),
-                      SizedBox(
-                        height: 32,
-                      ),
-                    ],
-                  ),
-                ),
               ),
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 44,
-              color: const Color(0xFF171717),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+              decoration: const BoxDecoration(
+                color: Color(0xFF171717),
+                border: Border(
+                  top: BorderSide(color: Colors.white, width: 0.2),
+                ),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: IconButton(
+                      padding: EdgeInsets.zero,
+                      icon: const ImageIcon(
+                          AssetImage('assets/images/ic_plus.png')),
+                      color: const Color(0xFF007AFF),
+                      onPressed: () {},
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 30,
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF4B4B4D),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Expanded(
+                            child: TextField(
+                              cursorColor: Colors.white,
+                              cursorHeight: 14,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white),
+                              decoration: InputDecoration(
+                                contentPadding:
+                                    EdgeInsets.fromLTRB(4, 0, 4, 16),
+                                border: InputBorder.none,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 24,
+                            height: 24,
+                            child: IconButton(
+                              padding: EdgeInsets.zero,
+                              icon: const ImageIcon(AssetImage(
+                                  'assets/images/ic_attachment.png')),
+                              color: const Color(0xFF007AFF),
+                              onPressed: () {},
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: IconButton(
+                      padding: EdgeInsets.zero,
+                      icon: const ImageIcon(
+                          AssetImage('assets/images/ic_camera.png')),
+                      color: const Color(0xFF007AFF),
+                      onPressed: () {},
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: IconButton(
+                      padding: EdgeInsets.zero,
+                      icon: const ImageIcon(
+                          AssetImage('assets/images/ic_microphone.png')),
+                      color: const Color(0xFF007AFF),
+                      onPressed: () {},
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }
